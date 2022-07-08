@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<body>
+  <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+<script>
+  /*
+  The opacity effect should be the same regardless if it was
+  defined with filters or properties.
+  */
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.globalAlpha = 0.75;
+  ctx.fillRect(10, 10, 50, 50);
+  ctx.globalAlpha = 0.5;
+  ctx.fillRect(70, 10, 50, 50);
+  ctx.globalAlpha = 0.25;
+  ctx.fillRect(10, 70, 50, 50);
+  ctx.globalAlpha = 0;
+  ctx.fillRect(70, 70, 50, 50);
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<link rel="match" href="canvas-filter-opacity-expected.html"/>
+<meta name="fuzzy" content="maxDifference=0-2; totalPixels=0-10000">
+<body>
+  <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+<script>
+  /*
+  The opacity effect should be the same regardless if it was
+  defined with filters or properties.
+  */
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.filter = 'opacity(75%)';
+  ctx.fillRect(10, 10, 50, 50);
+  ctx.filter = 'opacity(50%)';
+  ctx.fillRect(70, 10, 50, 50);
+  ctx.filter = 'opacity(25%)';
+  ctx.fillRect(10, 70, 50, 50);
+  ctx.filter = 'opacity(0%)';
+  ctx.fillRect(70, 70, 50, 50);
+</script>

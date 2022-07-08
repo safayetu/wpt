@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<body>
+  <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+<script>
+  /*
+  The expected behavior when setting the opacity through different methods
+  is that the opacity of the resulting drawn element is the product of the
+  opacity value set by each of the methods.
+  */
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.globalAlpha = 0.125;
+  ctx.fillRect(10, 10, 50, 50);
+</script>

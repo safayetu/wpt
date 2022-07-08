@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body>
+  <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+<script>
+  /*
+  The shadow effect should be the same regardless if it was
+  defined with filters or properties.
+  */
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.shadowColor = 'red';
+  ctx.shadowOffsetX = 10;
+  ctx.shadowOffsetY = 10;
+  ctx.fillRect(10, 10, 50, 50);
+</script>
